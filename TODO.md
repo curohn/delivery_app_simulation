@@ -1,0 +1,11 @@
+# TODO:
+- [ ] Finish making ERD diagram
+- [ ] Choose SQL (probably sqlite)
+- [ ] Create database and tables
+  - Addresses can just be time values for simplicity
+- [ ] Identify traits of the data
+  - More orders during rush (12pm and 7pm)
+  - Variability in order pickup and delivery +/- 5% to start
+  - x% failed orders
+  - Cost should be normal distibution around lets say $10
+  - tip could go up based on fast delivery
