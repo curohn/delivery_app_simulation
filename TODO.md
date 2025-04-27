@@ -17,16 +17,23 @@
 - [ ] Create order simulation script
 - [ ] Create synthetic data with script
 - [ ] Visualize using [streamlit]{https://streamlit.io/}
-- [ ] Research Real World delivery apps, their business models, and pricing strategies
-- [ ] Compare, using best guesses from research, different real world delivery apps
-
 
 ## Version 2
-Create driver schedule to be 4-8 hours a day, random hours distributed around 3pm
+- [ ] Research Real World delivery apps, their business models, and pricing strategies
+- [ ] Compare, using best guesses from research, different real world delivery apps
+- [ ] Normalize Tables better
+
+
+
+## Version 3
+- [ ] Create driver schedule to be 4-8 hours a day, random hours distributed around 3pm
   - fact_schedule (driver_id, date, start_time, end_time)
-Create resteraunt schedule, with different types (breakfast only, lunch & dinner, all)
+- [ ] Create resteraunt schedule, with different types (breakfast only, lunch & dinner, all)
   - open_time, close_time
-Normalize Tables better
-Create driver simulation script, or fold into one data simulation script
-Cluster resturaunt coordinates, to simulate town center
-Allow drivers to move diagnally
+- [ ] Create driver simulation script, or fold into one data simulation script
+- [ ] Cluster resturaunt coordinates, to simulate town center
+- [ ] Allow drivers to move diagnally
+- [ ] Create order queue, instead of populating all data at once, so data can be vizualized in real time
+  - [ ] Create orchestrator to pick nearest available driver
+  - [ ] Create driver transaction table, to know availability, and current location
+  - [ ] Create restaurant transaction to know current queue, and estimated time for all orders

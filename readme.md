@@ -38,15 +38,18 @@ Now what do we do about drivers? In the real world, a drivers location is always
 
 Distances will be calculated based on the absolute value differences in corrdinates. For the first iteration, we will assume drivers can only move on the x and y axis, and not diagonally. 
 If a driver is located at 5,5 and a restaurant is located at 52,60 then the distance will be:
-5 - 52 = -47 = |47|
-5 - 60 = -55 = |55|
+```
+5 - 52 = |-47| = 47
+5 - 60 = |-55| = 55
 47 + 55 = **103**
+```
 
 If a driver is located at 72,12, and the destination is at 87,54 the distance will be:
-72 - 87 = -15 = |15|
-12 - 54 = -42 = |42|
+```
+72 - 87 = |-15| = 15
+12 - 54 = |-42| = 42
 15 + 42 = **57**
-
+```
 Travel time will be 1/2 of the distance in minutes, with a minumum of 1 minute. 
 
 ### Open Hours
@@ -60,10 +63,7 @@ The order will be assigned to a restaurant.
 - The nearest restaurant with that item will be selected
 - The item will have an assigned prep time. 
 A driver will be assigned to that order.
-- The nearest available driver to that restaurant will be assigned to that order
-  - Drivers are available when:
-    - Not delivering another order
-    - During work hours (8am-8pm)
+- Drivers will be assigned in sequential order
 - Driver will then 'drive' to that restaurant, and pick up order
 The driver will deliver that order.
 - Driver will drive to customers location to deliver. 
@@ -77,11 +77,21 @@ The driver will deliver that order.
 
 `dim_restaurants` Will contain all restaurants, their randomly assinged cordinate address, items they have on their menu (A-Z), each items cost, and a random "prep_time" value to simulate how long it would take to make that item. Restaurants will be assumed to be able to cook multiple items in parallel, so we will just need the MAX(prep_time) for each order. 
 
+`dim_menu` Will contain the specific items on the menu at each resturaunt, as well as their associated cost. 
+
 `dim_drivers` Will contain drivers, their assigned coordinate address, and some generated names, emails, and phone numbers. 
 
 `fact_orders` Will be our transaction table. It will be populated by the simulation script.
 
-Shit I'm gonna need more tables. 
+# Main Script
+1. Query dim tables
+2. Create synthetic order data based on criteria above
+3. Load syntetic data into `fact_orders`
+
+## Secondary Script
+1. Query data in `fact_orders`
+2. Draw viz in Streamlit
+
 
 So I'm thinking a queue:
 order drops into queue 
@@ -95,6 +105,3 @@ restaurant transaction
 Driver transaction
 - driver id, pickup time, dropoff time, pickup location, dropoff location
 - I'll need to know somehow if a driver is available, and their location
-
-orchestrator
-- picks closest, available driver for an order
