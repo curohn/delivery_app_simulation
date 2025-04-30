@@ -1,4 +1,5 @@
 import random
+from datetime import datetime
 
 class Database:
     def __init__(self, db_path):
@@ -103,7 +104,7 @@ customer_order_demand = round(random.normalvariate(mean, std_dev))
 def simulate_orders(db_path):
     # Initialize database connection
     db = Database(db_path)
-
+    
     # Fetch data from the database
     restaurants_data = db.fetch_restaurants()
     drivers_data = db.fetch_drivers()
@@ -150,15 +151,29 @@ def simulate_orders(db_path):
                     (
                         customer.customer_id,
                         restaurant.restaurant_id,
-                        nearest_driver.driver_id,
-                        "18:00",  # Assuming orders start at 6 PM
-                        total_distance,
                         menu_item[0],  # menu_id
-                        menu_item[1],  # cost
-                        menu_item[2],  # prep_time
+                        nearest_driver.driver_id,
+                        order_date, #
+                        order_time, #
+                        menu_item[2],  # prep_time 
+                        1, #quantity 
+                        driver_location,
+                        pickup_location,
+                        estimated_pick_up_time,
+                        pick_up_time,
+                        delivery_location,
+                        estimated_delivery_time,
+                        delivery_time,
+                        menu_item[1],  # sub_total cost
+                        tip,
+                        total_cost,
+                        simulation_id = datetime.now().strftime("%Y%m%d_%H%M"),
+                        version = 1
                     )
                 )
                 db.conn.commit()
 
     # Close the database connection
     db.close()
+
+ 

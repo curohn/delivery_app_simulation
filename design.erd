@@ -74,7 +74,8 @@
           "rV_bJ9b57XJrWdGFDEhLj",
           "nDvz2XUnsc9xAGJN9mhLI",
           "pgKNiowZlNlhYgSV5p0hm",
-          "5eTFYWxiox5uv3r3D36tP"
+          "5eTFYWxiox5uv3r3D36tP",
+          "dxQzC1oaL8LmBdSlUg4dD"
         ],
         "seqColumnIds": [
           "nhA4sRjxSe4Xl7WXr9lFc",
@@ -100,7 +101,8 @@
           "rV_bJ9b57XJrWdGFDEhLj",
           "nDvz2XUnsc9xAGJN9mhLI",
           "pgKNiowZlNlhYgSV5p0hm",
-          "5eTFYWxiox5uv3r3D36tP"
+          "5eTFYWxiox5uv3r3D36tP",
+          "dxQzC1oaL8LmBdSlUg4dD"
         ],
         "ui": {
           "x": 139.1255,
@@ -111,7 +113,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1746043904203,
+          "updateAt": 1746048515807,
           "createAt": 1744675280702
         }
       },
@@ -1607,6 +1609,26 @@
           "updateAt": 1746040109955,
           "createAt": 1746040104166
         }
+      },
+      "dxQzC1oaL8LmBdSlUg4dD": {
+        "id": "dxQzC1oaL8LmBdSlUg4dD",
+        "tableId": "GJtbILqWHM-777Vichiic",
+        "name": "simulation_id",
+        "comment": "",
+        "dataType": "INTEGER",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 72,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1746048570268,
+          "createAt": 1746048515806
+        }
       }
     },
     "relationshipEntities": {
@@ -1630,7 +1652,7 @@
             "gnXJ9aS8YNDaSuuiQpatN"
           ],
           "x": 356.1255,
-          "y": 1000.2083,
+          "y": 1024.2083,
           "direction": 8
         },
         "meta": {
@@ -1658,7 +1680,7 @@
             "Y1PHN2GsTdIeSGAxa4aTk"
           ],
           "x": 573.1255,
-          "y": 616.2083,
+          "y": 622.2083,
           "direction": 2
         },
         "meta": {
@@ -1686,7 +1708,7 @@
             "yOTmCDlwqOpu6ZdUcxTpH"
           ],
           "x": 573.1255,
-          "y": 872.2083,
+          "y": 890.2083,
           "direction": 2
         },
         "meta": {
@@ -2492,6 +2514,15 @@
       -1,
       {
         "name": 1746040109955
+      }
+    ],
+    "dxQzC1oaL8LmBdSlUg4dD": [
+      "tableColumnEntities",
+      1746048515805,
+      -1,
+      {
+        "name": 1746048521027,
+        "dataType": 1746048570268
       }
     ]
   }
