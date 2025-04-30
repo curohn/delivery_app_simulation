@@ -2,20 +2,16 @@
 - [x] ERD diagram
 - [x] Choose SQL (probably sqlite)
 - [ ] Create database and tables
-  - [x] dim_dates
-  - [ ] dim_drivers
-  - [ ] dim_customers
-  - [ ] dim_resturaunts
-  - [ ] fact_orders
-  - [ ] fact_driver_location
-- [ ] Identify traits of the data
-  - More orders during rush (12pm and 7pm)
-  - Variability in order pickup and delivery +/- 5% to start
-  - x% failed orders
-  - Cost should be normal distibution around lets say $10
-  - tip could go up based on fast delivery
+  - [x] `dim_dates`
+  - [x] `dim_drivers`
+  - [x] `dim_customers`
+  - [x] `dim_resturaunts`
+  - [x] `dim_menu`
+  - [ ] `fact_orders`
+- [x] Populate `dim` tables with data
 - [ ] Create order simulation script
-- [ ] Create synthetic data with script
+  - [ ] Create synthetic data with script
+  - [ ] Write synthetic data to `fact_orders`
 - [ ] Visualize using [streamlit]{https://streamlit.io/}
 
 ## Version 2
@@ -37,3 +33,10 @@
   - [ ] Create orchestrator to pick nearest available driver
   - [ ] Create driver transaction table, to know availability, and current location
   - [ ] Create restaurant transaction to know current queue, and estimated time for all orders
+- [ ] Implement restaurant open and close hours
+- [ ] More Variability
+  - [ ] More orders during rush (12pm and 7pm)
+  - [ ] Variability in order pickup and delivery +/- 5% to start
+  - [ ] x% failed orders
+  - [ ] tip could go up based on fast delivery
+  - [ ] More then one item
